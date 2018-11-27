@@ -1,0 +1,10 @@
+@mixin btn-default {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5rem 4rem;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: transform .1s;
+    position: relative;
+    font-size: 1.6rem;
+}

@@ -1,177 +1,29 @@
-/*
-COLORS:
+// Author: Parth Patel
+// 27-11-18
+// Om Construction Web Page
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+// Import partials
+// abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-*/
-$color-main: #777;
-$color-blue-light: #669bbc;
-$color-blue-dark: #29335c;
-$color-white: #fff;
-$color-black: #000;
-$color-orange: #f3a712;
-$color-purple: #29335c;
+// base
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
 
-/* Universal reset
-**************************** */
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
+// components
+@import "components/button";
 
-/* ********************** */
+// layouts
+@import "layout/header";
 
 
-/* Set global style
-**************************** */
-
-html{
-    font-size: 62.5%;
-}
-
-body{
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7;
-    color:$color-main;
-    padding: 3rem;
-    box-sizing: border-box;
-}
-
-/* ************************** */
-
-.header{
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(#669bbc, 0.8),
-        rgba(#29335c, 0.8)),
-        url("../../img/constr/main-headerv2.jpg");
-    background-size: cover;
-    background-position: top;/*top stays same*/
-    clip-path: polygon(0 0, 100% 0, 100% 85vh , 0 100%);
-    /* clip-path: polygon(0 20%, 50% 0,100% 20%, 90% 20%, 90%  100%, 10% 100%, 10% 20%); */
-    /* clip-path: polygon(0 5%, 50% 0,100% 5%, 98% 5%, 98%  100%, 10% 100%, 10% 11%); */
-    position: relative;
-}
+// pages
+@import "pages/home";
 
 
-.header__logo-box{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo{
-   height: 3.5rem;
-}
-
-.heading-primary{
-    color:$color-white;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 4rem;
-}
-
-.heading-primary--main{
-    display: block;
-    font-size: 5.4rem;
-    font-weight: 400;
-    letter-spacing: 1rem;
-    animation: 1.5s  ease-out moveInLeft 1.2s;
-}
-
-@keyframes moveInLeft{
-    from {
-        opacity: .5;
-        transform: translateX(-10rem)
-    }
-    to { 
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-.heading-primary--sub{
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5rem;
-    animation: 1.5s ease-out moveInRight 1.2s;
-}
-
-@keyframes moveInRight{
-    from {
-        opacity: .5;
-        transform: translateX(10rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-
-}
-
-.header__text-box{
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
 
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: .5rem 4rem;
-    display: inline-block;
-    border-radius: 1rem;
-    transition: transform .1s;
-    position: relative;
-    font-size: 1.6rem;
-}
-
-.btn:hover{
-    transform: translateY(-.2rem);
-    box-shadow: 0 .8rem 2rem rgba($color-black,.3);
-}
-
-.btn:active{
-    transform: translateY(-.1rem);
-    box-shadow: 0 .6rem 1rem rgba($color-black,.2);
-}
-
-.btn--orange{
-    background: $color-orange;
-    color: $color-purple;
-}
-
-.btn::after{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .1s;
-}
-
-.btn--orange::after{
-    background: rgba($color-white, 0.5);
-    border-radius: 1rem;
-}
-
-.btn:hover::after{
-    transform: scale(1.4);
-    opacity: 0;
-}
