@@ -20,3 +20,9 @@
         transform: translateX(0%);
     }
 }
+
+@keyframes dazzle{
+    to { 
+        background-position: 200% center;
+    }
+}

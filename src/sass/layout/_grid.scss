@@ -1,0 +1,33 @@
+.row{
+    max-width: $grid-width;
+    margin: 0 auto;
+    
+    &:not(:last-child){
+        margin-bottom: $grid-margin-bottom;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        // background: purple;
+        float: left;
+
+        &:not(:last-child){
+            margin-right: $grid-margin-side;
+        }
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$grid-margin-side}) /2);
+    }
+
+    .col-2-of-2{
+        width: 100%;
+    }
+
+    .col-1-of-3{
+        width: calc((100% - #{$grid-margin-side*2}) /3);
+       
+    }
+
+}

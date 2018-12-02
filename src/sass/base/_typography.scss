@@ -25,6 +25,45 @@
     
 }
 
+.heading-secondary{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: $color-blue-dark;
+    background: linear-gradient(to right, $color-blue-light , $color-blue-dark);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: dazzle 2s ease-out infinite reverse;
+    letter-spacing: .2rem;
+
+    &:hover{
+        background: $color-blue-dark;
+        background-clip: text;
+        transform: skewX(1deg) scale(1.03);
+    }
+}
+
+.heading-tertiary{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 400;
+
+}
+
+.p-text{
+    font-size: $font-size-normal;
+    letter-spacing: .1rem;
+    color: black;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
