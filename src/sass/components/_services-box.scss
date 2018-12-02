@@ -1,0 +1,23 @@
+.services-box{
+    font-size: 1.5rem;
+    // color: $color-black;
+    border-radius: 2px;
+    background: rgba($color-white, 0.8);
+    box-shadow: 0 1rem 2.5rem rgba($color-black, 0.15);
+    padding: 5rem 1rem;
+    transition: transform .12s ease-out;
+
+    &:hover{
+        transform: translateY(-.2rem) scale(1.05);
+    }
+
+    &__icon{
+        height: 4rem;
+    }
+
+    .p-text{
+        &__services{
+            font-size: 1.5rem;
+        }
+    }
+}
