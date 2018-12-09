@@ -54,6 +54,14 @@
 
 }
 
+.card{
+    &__text{
+        text-align: center;
+        font-size: 24px;
+        color: white;
+    }
+}
+
 .p-text{
     font-size: $font-size-normal;
     letter-spacing: .1rem;

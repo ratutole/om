@@ -9,6 +9,12 @@
     font-size: $font-size-normal;
 }
 
+@mixin work-bg {
+    background-position: top;/*top stays same*/
+    background-size: cover;
+    height: 100%;
+}
+
 @mixin clearfix {
     &::after{
         content: "";

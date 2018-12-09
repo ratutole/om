@@ -2,30 +2,74 @@
     perspective: 150rem;
     -moz-perspective: 200rem;
     position: relative;
-    height: 50rem;
+    height: 30rem;
 
     &__side{
-        background: orangered;
-        height: 50rem;
+        height: 30rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         backface-visibility: hidden;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 1rem 2.5rem rgba($color: $color-black, $alpha: 0.2);
         
         &--front{
-            background: yellow;
+            background: $color-grey-light2;
         }
         
         &--back{
-            background: red;
             transform: rotateY(180deg);
+        }
+ 
+    }//Card side end
+
+    &__picture{
+
+        // background-blend-mode: darken;
+
+        &--1{
+            background: url("../../img/constr/work1.jpeg");
+            @include work-bg;
+        }
+        &--2{
+            background: url("../../img/constr/work2.jpg");
+            @include work-bg;
+        }
+        &--3{
+            background: url("../../img/constr/work3.jpg");
+            @include work-bg;
+        }
+    }
+
+    &__content{
+        position: relative;
+        height: 100%;
+        .card__text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+        }
+
+        &--1{
+            background: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark); 
+        }
+
+        &--2{
+            background: linear-gradient(to right bottom, $color-orange, $color-orange-dark); 
+        }
+
+        &--3{
+            background: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark); 
         }
     }
 
     &:hover &__side--front{
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
 
     &:hover &__side--back{
