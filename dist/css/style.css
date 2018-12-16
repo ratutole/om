@@ -422,7 +422,6 @@ body {
     background: pink;
     float: left;
     transform: translateX(-3rem) skewX(12deg);
-    clip-path: inset(100%);
     position: relative; }
     @media (max-width: 56.25em) {
       .story__shape {
@@ -430,7 +429,8 @@ body {
   .story__image {
     width: 100%;
     transform: translateY(0rem) scale(1.05);
-    transition: all .3s ease-in-out; }
+    transition: all .3s ease-in-out;
+    z-index: inherit; }
   .story__caption {
     position: absolute;
     top: 50%;

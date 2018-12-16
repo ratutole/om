@@ -39,7 +39,7 @@
         background: pink;
         float: left;
         transform: translateX(-3rem) skewX(12deg);
-        clip-path: inset(100%); //Remember for images
+        // clip-path: inset(100%); //Remember for images
         position: relative;
 
         @include respond(tabP){
@@ -51,6 +51,7 @@
         width: 100%;
         transform: translateY(0rem) scale(1.05);
         transition: all .3s ease-in-out;
+        z-index: inherit;
     }
 
     &__caption{
