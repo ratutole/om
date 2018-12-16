@@ -37,9 +37,9 @@
 // 600-900
 // 900-1200
 
-@mixin phone {
-    @media screen and (max-width:600px){ @content};
-}
+// @mixin phone {
+//     @media screen and (max-width:600px){ @content};
+// }
 
 // breakpoint
 // phone, tabP, tabL
@@ -56,5 +56,8 @@
     }
     @if $breakpoint == tabL {
         @media (max-width:75em){ @content };//1200px
+    }
+    @if $breakpoint == pc {
+        @media (min-width:75em){ @content };//1200px
     }
 }
