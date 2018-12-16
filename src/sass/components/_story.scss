@@ -5,14 +5,21 @@
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.15);
     border-radius: 2px;
     padding: 4rem;
-    // padding-top: 3rem;
     padding-left: 7rem;
     font-size: 1.5rem;
     color: black;
     transform: skewX(-12deg);
+
+    @include respond(tabP){
+        width: 100%;
+        transform: skewX(0deg);
+    }
     
     & > *{
         transform: skewX(12deg);
+        @include respond(tabP){
+            transform: skewX(0deg);
+        }
     }
 
     &:hover &__caption{
@@ -20,7 +27,7 @@
     }
 
     &:hover &__image{
-        transform: translateY(-2rem) scale(1);
+        transform: translateY(-1rem) scale(1);
         filter: blur(.3rem) brightness(80%);
     }
     
@@ -34,11 +41,15 @@
         transform: translateX(-3rem) skewX(12deg);
         clip-path: inset(100%); //Remember for images
         position: relative;
+
+        @include respond(tabP){
+            transform: translateX(-3rem) skewX(0deg);
+        }
     }
     
     &__image{
         width: 100%;
-        transform: translateY(-2rem) scale(1.05);
+        transform: translateY(0rem) scale(1.05);
         transition: all .3s ease-in-out;
     }
 

@@ -47,14 +47,43 @@
                                     rgba($color-white,.9) 0%,
                                     rgba($color-white,.9) 42%,
                                     transparent 42%),
-                                    url('../../img/constr/main-headerv1.jpg');
+                                    url('../../img/constr/main-header-large.jpg');
     background-size: cover;
+    // background-position: left;
     border-radius: .2rem;
     box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+
+    @include respond(tabL){
+        background: linear-gradient(90deg, 
+                                    rgba($color-white,.85) 0%,
+                                    rgba($color-white,.85) 55%,
+                                    transparent 55%),
+                                    url('../../img/constr/main-header-large.jpg');
+        background-size: cover;
+        background-position: right;
+    }
+
+    @include respond(tabP){
+        background: linear-gradient(90deg, 
+                                    rgba($color-white,.85) 0%,
+                                    rgba($color-white,.85) 100%,
+                                    transparent 100%);
+        background-size: cover;
+        background-position: right;
+    }
+
+    
 
     &__form{
         width: 42%;
         padding: 6rem;
+
+        @include respond(tabL){
+            width: 55%;
+        }
+        @include respond(tabP){
+            width: 100%;
+        }
     }
 }
 

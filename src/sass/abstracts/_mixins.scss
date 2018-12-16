@@ -17,6 +17,10 @@
     background-position: top;/*top stays same*/
     background-size: cover;
     height: 100%;
+
+    @include respond(tabP){
+        height: 35rem;
+    }
 }
 
 @mixin clearfix {
