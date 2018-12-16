@@ -17,6 +17,12 @@
         z-index: 10;
         outline-offset: .2rem;
         border-radius: .1rem;
+
+        @include respond(tabP){
+            float: left;
+            position: relative;
+            width: 45%;
+        }
         
         &:hover{
             outline: .4rem solid green;
@@ -29,12 +35,23 @@
             top: 4rem;
             left: 30%;
             z-index: 15;
+
+            @include respond(tabP){
+                top:0;
+                left:0;
+                margin-right: 10%;
+            }
         }
 
         &--p2{
             top: -1rem;
             left: 40%;
+
+            @include respond(tabP){
+                top:0;
+                left:0;
             }
+        }
 
     }
 

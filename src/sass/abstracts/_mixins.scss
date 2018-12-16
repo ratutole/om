@@ -7,6 +7,10 @@
     transition: transform .1s;
     position: relative;
     font-size: $font-size-normal;
+
+    // for button tag
+    border: none;
+    cursor: pointer;
 }
 
 @mixin work-bg {
@@ -20,5 +24,33 @@
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+
+// Media queries 
+// 0-600
+// 600-900
+// 900-1200
+
+@mixin phone {
+    @media screen and (max-width:600px){ @content};
+}
+
+// breakpoint
+// phone, tabP, tabL
+
+// order - base + typography > general layout > grid > page layout > components
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width:37.5em){ @content };//600px
+    }
+    @if $breakpoint == tabP {
+        @media (max-width:56.25em){ @content };//900px
+    }
+    @if $breakpoint == tabL {
+        @media (max-width:75em){ @content };//1200px
     }
 }

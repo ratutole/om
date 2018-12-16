@@ -1,7 +1,9 @@
 .btn{
-    &:link,&:visited{
+    &,&:link,&:visited{
         @include btn-default;
     }
+
+
 
     &:hover{
         transform: translateY(-.2rem);

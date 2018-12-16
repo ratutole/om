@@ -13,6 +13,24 @@
         <title>Om Construction Ltd</title>
     </head>
     <body>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="toggle-nav">
+            <label for="toggle-nav" class="navigation__btn">
+                <span class="navigation__toggle">
+                    &nbsp;
+                </span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#home" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#services" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="#work" class="navigation__link">Work</a></li>
+                    <li class="navigation__item"><a href="#quote" class="navigation__link">Get Quote</a></li>
+                </ul>
+            </nav>
+        </div>
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/constr/logov2.png" alt="Site Logo" class="header__logo">
@@ -24,6 +42,10 @@
                 </h1>
 
                 <a href="#" class="btn btn--orange">Get quote</a>
+            </div>
+            <div class="header__contact-box">
+                <span class="contact-box__email">omconstruction@gmail.com</span>
+                <span class="contact-box__phone">041243023</span>
             </div>
         </header>
         <!-- header end ***************** -->
@@ -177,8 +199,48 @@
                 </div>
             </section><!--About end-->
 
+            <section class="section-inquire">
+                <div class="row">
+                    <div class="inquire">
+                        <div class="inquire__form">
+                            <form action="#" class="form">
+                                <div class="u-margin-bottom-medium">
+                                    <h2 class="heading-secondary heading-secondary__about">Ask for quotation</h2>
+                                </div>
+                                <div class="form__group">
+                                    <input id="fullname" type="text" class="form__input" placeholder="Full Name" required>
+                                    <label for="fullname" class="form__label">Full Name</label>
+                                </div>
+                                <div class="form__group">
+                                    <input id="email" type="email" class="form__input" placeholder="Email" required>
+                                    <label for="email" class="form__label">Email</label>
+                                </div>
+                                <div class="form__group">
+                                    <textarea id="inquire-text" class="form__text" required placeholder="Enter Text here" rows="5"></textarea>
+                                    <label for="inquire-text" class="form__label">Message</label>
+                                </div>
+                                <div class="form__group">
+                                    <button class="btn btn--orange">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
-       
+        <footer class="footer">
+            <div class="row">
+                <div class="col-2-of-2">
+                    <div class="copyright">
+                        <div class="copyright__container">
+                            <span class="copyright__content">&copy;Copyright 2018. All Rights Reserved</span>
+                            <span class="copyright__content">Om Construction Ltd</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </footer>
     </body>
 </html>
 

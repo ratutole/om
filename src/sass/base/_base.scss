@@ -16,10 +16,24 @@
 
 html{
     font-size: 62.5%;
+
+    @include respond(tabL){
+        font-size: 56.25%;
+    }
+
+    @include respond(tabP){
+        font-size: 50%;
+    }
+
 }
 
 body{
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tabP){
+        padding: 0;
+    }
     // background:green;
 }
 

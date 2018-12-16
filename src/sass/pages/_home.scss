@@ -1,20 +1,63 @@
 .section-about{
     background: $color-grey-light;
-    // padding: 15rem 0;
+    padding-bottom: 15rem;
+    @include respond(phone){
+        padding-bottom: 8rem;
+    }
 }
 
 .section-services{
     background: $color-grey-light;
     padding: 15rem 0;
     margin-top: -10vh;
+
+     @include respond(phone){
+       padding-bottom: 8rem;
+    }
+    
 }
 
 .section-work{
     background: $color-grey-light;
+    
     // padding: 10
 }
 
 .section-stories{
     padding: 15rem 0;
     background: $color-grey-light;
+
+    @include respond(phone){
+        padding: 8rem 0;
+    }
+}
+
+.section-inquire{
+    padding: 15rem 0;
+    // background: green;
+    background: linear-gradient(to right bottom, $color-blue-light, $color-blue-dark);
+
+    @include respond(phone){
+        padding: 8rem 0;
+    }
+}
+
+.inquire{
+    background: linear-gradient(90deg, 
+                                    rgba($color-white,.9) 0%,
+                                    rgba($color-white,.9) 42%,
+                                    transparent 42%),
+                                    url('../../img/constr/main-headerv1.jpg');
+    background-size: cover;
+    border-radius: .2rem;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+
+    &__form{
+        width: 42%;
+        padding: 6rem;
+    }
+}
+
+.footer{
+    padding: 5rem 0;
 }

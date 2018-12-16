@@ -1,0 +1,14 @@
+.footer{
+    background: #2c2727;
+
+    .copyright{
+        // max-width: 30rem;
+        &__content{
+            display: block;
+            font-size: 1.4rem;
+            color: white;
+            text-align: center;
+        }
+    }
+
+}

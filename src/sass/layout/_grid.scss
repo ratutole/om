@@ -4,6 +4,15 @@
     
     &:not(:last-child){
         margin-bottom: $grid-margin-bottom;
+
+        @include respond(tabP){
+            margin-bottom: $grid-margin-bottom-small;
+        }
+    }
+
+    @include respond(tabP){
+        max-width: 50rem;
+        padding: 0 2rem;
     }
 
     @include clearfix;
@@ -14,6 +23,15 @@
 
         &:not(:last-child){
             margin-right: $grid-margin-side;
+
+            @include respond(tabP){
+                margin-right: 0;
+                margin-bottom: $grid-margin-bottom;
+            }
+        }
+
+        @include respond(tabP){
+            width: 100% !important;
         }
     }
 
