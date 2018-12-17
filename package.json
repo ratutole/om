@@ -4,7 +4,9 @@
   "description": "A site for om construction",
   "main": "index.js",
   "scripts": {
-    "compile-sass": "node-sass src/sass/main.scss dist/css/style.css -w"
+    "watch-sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "compile-sass": "node-sass src/sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css"
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,9 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/ratutole/construction-site#readme",
   "devDependencies": {
-    "node-sass": "^4.10.0"
+    "autoprefixer": "^9.4.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.10.0",
+    "postcss-cli": "^6.0.1"
   }
 }
