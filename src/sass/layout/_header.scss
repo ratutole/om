@@ -3,8 +3,7 @@
     background-image: linear-gradient(
         to right bottom,
         rgba(#669bbc, 0.8),
-        rgba(#29335c, 0.8)),
-        url("../../img/constr/main-header-smallv2.jpg");
+        rgba(#29335c, 0.8));
     background-size: cover;
     background-position: top;/*top stays same*/
     // clip-path: polygon(0 0, 100% 0, 100% 85vh , 0 100%);
@@ -16,8 +15,7 @@
         background-image: linear-gradient(
         to right bottom,
         rgba(#669bbc, 0.8),
-        rgba(#29335c, 0.8)),
-        url("../../img/constr/main-header-largev2.jpg");
+        rgba(#29335c, 0.8));
         background-size: cover;
         background-position: top;
     }
